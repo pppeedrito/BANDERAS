@@ -23,11 +23,11 @@ public class Res_Banderas extends AppCompatActivity {
         setContentView(R.layout.activity_res__banderas);
         Bundle b = getIntent().getExtras();
 
-        Button CHECKTBLES;
+        Button buttonCheck;
         ImageView FotoIdioma;
         EditText año,fundador,sobrenombre;
         TextView Titulo,url;
-        CHECKTBLES = (Button)findViewById(R.id.btncheck);
+        buttonCheck = (Button)findViewById(R.id.btncheck);
         FotoIdioma = (ImageView)findViewById(R.id.imagebandera);
         año=(EditText)findViewById(R.id.txtAño);
         fundador=(EditText)findViewById(R.id.txtFundador);
@@ -209,215 +209,211 @@ public class Res_Banderas extends AppCompatActivity {
                 });
                 break;
             case "Juego":
-                if (cont==0 ){
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.tailandia  );
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Tailandia"));
 
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-                    cont=cont+1;
-                    break;
+                //hacemos invisible el boton
+                buttonCheck.setVisibility(View.VISIBLE);
+                for(int i=-1;i<cont;i++ ) {
+                    if (cont == 0) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.tailandia);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Tailandia"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 1) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.japo);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Jap%C3%B3n#Dise.C3.B1o"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 8) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.japo);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Jap%C3%B3n#Dise.C3.B1o"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 2) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.chile);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Chile"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 3) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.russia);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Rusia#Construcci.C3.B3n_de_la_bandera"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+
+
+                    if (cont == 4) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.paki);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Pakistán"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 5) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.canada);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Canadá"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 6) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //ponemos la foto con un onclick
+                        FotoIdioma.setImageResource(R.drawable.argentina);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_la_Argentina"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+                        });
+
+                        cont = cont + 1;
+                        break;
+                    }
+                    if (cont == 7) {
+                        //Dejamos los textos vacio para que los llene
+                        año.setText("");
+                        fundador.setText("");
+                        sobrenombre.setText("");
+                        Titulo.setText("Rellena los textos vacios:");
+                        //Rellenamos el campo de la foto
+                        FotoIdioma.setImageResource(R.drawable.british);
+                        //aHORA el link nos dara problemas si no metemos el onClick
+                        url.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View view) {
+                                //creamos el objeto intent y le decomos la URL a la que queremos ir
+                                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_del_Reino_Unido"));
+
+                                //iniciamos el Intent
+                                startActivity(i);
+                            }
+
+                        });
+                        cont = 0;
+                        break;
+                    }
+
+
                 }
-                if (cont==1 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.japo);
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View view) {
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Jap%C3%B3n#Dise.C3.B1o"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==8 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.japo);
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View view) {
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Jap%C3%B3n#Dise.C3.B1o"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==2 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.chile  );
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Chile"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==3 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.russia  );
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Rusia#Construcci.C3.B3n_de_la_bandera"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-
-
-                if (cont==4 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.paki );
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Pakistán"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==5 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.canada);
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_Canadá"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==6 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //ponemos la foto con un onclick
-                    FotoIdioma.setImageResource(R.drawable.argentina);
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_de_la_Argentina"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-                    });
-
-                    cont = cont + 1;
-                    break;
-                }
-                if (cont==7 ) {
-                    //Dejamos los textos vacio para que los llene
-                    año.setText("");
-                    fundador.setText("");
-                    sobrenombre.setText("");
-                    Titulo.setText("Rellena los textos vacios:");
-                    //Rellenamos el campo de la foto
-                    FotoIdioma.setImageResource(R.drawable.british);
-                    //aHORA el link nos dara problemas si no metemos el onClick
-                    url.setOnClickListener(new View.OnClickListener()
-                    {
-                        public void onClick(View view){
-                            //creamos el objeto intent y le decomos la URL a la que queremos ir
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://es.wikipedia.org/wiki/Bandera_del_Reino_Unido"));
-
-                            //iniciamos el Intent
-                            startActivity(i);
-                        }
-
-                    });
-                    cont = 0;
-                    break;
-                }
-
-
-
-
         }
     }
 
